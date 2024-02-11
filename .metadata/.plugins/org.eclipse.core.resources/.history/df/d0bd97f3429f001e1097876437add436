@@ -1,0 +1,38 @@
+PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+
+LLVM_DIR = /home/kamel/old/kamel/cybersecurity-project/
+
+CXX = $(LLVM_DIR)/llvm-project/build/bin/clang++
+CC = /home/kamel/old/kamel/cybersecurity-project/llvm-project/build/bin/clang
+INC_FLAGS  = -I./include -I/home/kamel/old/kamel/cybersecurity-project/qarma64/include
+LIB_FLAGS  = -L/home/kamel/old/kamel/cybersecurity-project/qarma64/build/lib/ -lQarma64
+
+OBJS = pa-test.o
+
+ifeq ($(BUILD_MODE),debug)
+	CFLAGS += -g
+else ifeq ($(BUILD_MODE),run)
+	CFLAGS += -O2
+else ifeq ($(BUILD_MODE),linuxtools)
+	CFLAGS += -g -pg -fprofile-arcs -ftest-coverage
+	LDFLAGS += -pg -fprofile-arcs -ftest-coverage
+	EXTRA_CLEAN += pa-test.gcda pa-test.gcno $(PROJECT_ROOT)gmon.out
+	EXTRA_CMDS = rm -rf pa-test.gcda
+else
+    $(error Build mode $(BUILD_MODE) not supported by this Makefile)
+endif
+
+all:	pa-test
+
+pa-test:	$(OBJS)
+	$(CXX) $(LDFLAGS) -o $@ $^
+	$(EXTRA_CMDS)
+
+%.o:	$(PROJECT_ROOT)%.cpp
+	$(CXX) -c $(CFLAGS) $(CXXFLAGS) $(CPPFLAGS) -o $@ $<
+
+%.o:	$(PROJECT_ROOT)%.c
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+
+clean:
+	rm -fr pa-test $(OBJS) $(EXTRA_CLEAN)

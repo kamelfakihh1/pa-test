@@ -1,0 +1,13 @@
+15:26:50 **** Incremental Build of configuration Debug for project test1 ****
+make all 
+Building file: ../src/test1.cpp
+Invoking: Cross G++ Compiler
+clang++ -O0 -g --target=aarch64-linux-gnu --sysroot=/home/kamel/old/kamel/cybersecurity-project/qemu-arm64-machine/debian/aarch64-sysroot/ -MMD -MP -MF"src/test1.d" -MT"src/test1.o" -o "src/test1.o" "../src/test1.cpp"
+/usr/bin/ld: unrecognised emulation mode: aarch64linux
+Supported emulations: elf_x86_64 elf32_x86_64 elf_i386 elf_iamcu i386pep i386pe
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [src/subdir.mk:20: src/test1.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+15:26:51 Build Failed. 2 errors, 0 warnings. (took 318ms)
+

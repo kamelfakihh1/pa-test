@@ -1,0 +1,10 @@
+config/pa-test/cdt.launchMode=run
+config/pa-test/cdt.toolChain.id=gcc-x86_64-/usr/bin/gcc
+config/pa-test/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+config/pa-test/org.eclipse.cdt.make.core.provider/make.debug.linux.x86_64/cdt.launchMode=debug
+config/pa-test/org.eclipse.cdt.make.core.provider/make.debug.linux.x86_64/cdt.toolChain.id=gcc-x86_64-/usr/bin/gcc
+config/pa-test/org.eclipse.cdt.make.core.provider/make.debug.linux.x86_64/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+config/pa-test/org.eclipse.cdt.make.core.provider/make.debug.linux.x86_64/stdbuild.build.container=/pa-test/build/make.debug.linux.x86_64
+config/pa-test/stdbuild.build.container=/pa-test/build/default
+eclipse.preferences.version=1
+macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<macros/>\n
