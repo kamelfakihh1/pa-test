@@ -32,7 +32,7 @@ LaunchTargetManager/org.eclipse.cdt.docker.launcher.launchTargetType.container,[
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.debug.core.coreBuildDescriptorType\:pa-test,org.eclipse.cdt.debug.core.coreBuildDescriptorType\:test2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:pa-test Configuration
+configDescList=org.eclipse.cdt.debug.core.coreBuildDescriptorType\:pa-test,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:pa-test Configuration
 eclipse.preferences.version=1
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:pa-emu-test/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:pa-test/activeLaunchMode=run

@@ -1,3 +1,5 @@
 make -f ../../Makefile
-make: Nothing to be done for 'all'.
+/home/kamel/old/kamel/cybersecurity-project//llvm-project/build/bin/clang++ -mllvm -pa-emu -c -g --target=aarch64-linux-gnu --sysroot=/home/kamel/old/kamel/cybersecurity-project/qemu-arm64-machine/debian/aarch64-sysroot/   -I./include -I/home/kamel/old/kamel/cybersecurity-project/qarma64/include -o pa-test.o /home/kamel/old/kamel/cybersecurity-project/workspace/pa-test/pa-test.cpp
+/home/kamel/old/kamel/cybersecurity-project//llvm-project/build/bin/clang++ -mllvm -pa-emu -fuse-ld=lld --target=aarch64-linux-gnu --sysroot=/home/kamel/old/kamel/cybersecurity-project/qemu-arm64-machine/debian/aarch64-sysroot/ -I./include -I/home/kamel/old/kamel/cybersecurity-project/qarma64/include -L/home/kamel/old/kamel/cybersecurity-project/qarma64/build/lib/ -lQarma64 -o pa-test pa-test.o
+clang++: warning: argument unused during compilation: '-mllvm -pa-emu' [-Wunused-command-line-argument]
 Build complete (0 errors, 0 warnings): /home/kamel/old/kamel/cybersecurity-project/workspace/pa-test/build/make.debug.linux.x86_64

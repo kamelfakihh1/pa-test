@@ -2,6 +2,7 @@
 
 void func1(){
 	std::cout << "Function 1" << std::endl;
+	return;
 }
 
 int main(int argc, char **argv) {

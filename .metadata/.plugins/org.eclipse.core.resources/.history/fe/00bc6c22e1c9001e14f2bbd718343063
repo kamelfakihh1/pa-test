@@ -1,9 +1,10 @@
 PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-LLVM_DIR = /home/kamel/old/kamel/cybersecurity-project/
+LLVM_DIR  = /home/kamel/old/kamel/cybersecurity-project/
+QARMA_DIR = /home/kamel/old/kamel/cybersecurity-project/
 
 CXX = $(LLVM_DIR)/llvm-project/build/bin/clang++
-CC = /home/kamel/old/kamel/cybersecurity-project/llvm-project/build/bin/clang
+CC = $(LLVM_DIR)/llvm-project/build/bin/clang
 INC_FLAGS  = -I./include -I/home/kamel/old/kamel/cybersecurity-project/qarma64/include
 LIB_FLAGS  = -L/home/kamel/old/kamel/cybersecurity-project/qarma64/build/lib/ -lQarma64
 
